@@ -50,7 +50,9 @@ export default function DropZone() {
   const onDrop = (files: File[]) => {
     files.forEach((file: File) => {
       const reader = new FileReader();
+      // eslint-disable-next-line no-console
       reader.onabort = () => console.log("file reading failed");
+      // eslint-disable-next-line no-console
       reader.onerror = () => console.log("file reading error");
       reader.onload = async () => {
         await uploadFile(file);

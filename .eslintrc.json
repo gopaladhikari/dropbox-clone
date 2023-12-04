@@ -10,6 +10,8 @@
     "project": "./tsconfig.json"
   },
   "plugins": ["@typescript-eslint"],
+
+  "ignorePatterns": ["src/components/ui/*.tsx"],
   "rules": {
     "react/react-in-jsx-scope": 0,
     "react/jsx-props-no-spreading": 0,
